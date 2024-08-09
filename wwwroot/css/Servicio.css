@@ -1,0 +1,80 @@
+.profesion-group h3 {
+    text-align: center;
+    margin-bottom: 20px; /* Separación inferior del título */
+}
+
+.card-container {
+    padding: 15px;
+}
+
+.card-items {
+
+    
+    
+    background-color: #f8f9fa; 
+    padding: 20px;            
+    border: 1px solid #dee2e6; 
+    border-radius: 10px;       
+    height: 100%;              
+    margin-bottom: 100em;   
+        
+        
+}
+
+
+
+.tamaniocard{
+
+ height: 20em;
+    width: 23em;
+    margin: 10px; 
+    display: grid;
+    background-image: url("/wwwroot/lib/img/albañil.jpeg");
+    background-color: #bbc5cf; 
+    padding: 20px; 
+    border: 1px solid #dee2e6; 
+    border-radius: 10px; 
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-gap: 20px;
+
+ 
+  
+ 
+
+    background-size: cover;
+
+  
+}
+
+.card-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.card-text {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.card-action {
+    text-align: right;
+}
+
+.boton-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem; 
+  }
+  
+  .boton {
+  padding: 1rem 2rem; 
+  font-size: 1.25rem; 
+  border-radius: 0.5rem;
+  }
+
+  .lugar{
+    text-align: center;
+  }
+  
