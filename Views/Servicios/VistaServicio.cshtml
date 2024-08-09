@@ -1,0 +1,114 @@
+@model Postulate.Models.VistaServicio
+
+<head>
+    <link rel="stylesheet" href="~/css/VistaServicio.css" asp-append-version="true" />
+</head>
+
+
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="ModalProvincia" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="ModalTitulo"></h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form id="formProvincia">
+                    <input type="hidden" id="ServicioID" value="0">
+                    <div class="mb-3">
+                        <label for="descripcion" class="form-label">Descripción</label>
+                        <input type="text" class="form-control" id="descripcion" placeholder="Agregar Descripción">
+                    </div>
+                    <div class="mb-3">
+                        <label for="herramienta" class="form-label">Herramienta</label>
+                        <input type="checkbox" class="form-control" id="herramienta" placeholder="Herramienta">
+                    </div>
+                    <div class="mb-3">
+                        <label for="titulo" class="form-label">Título</label>
+                        <input type="text" class="form-control" id="titulo" placeholder="Título profesional/Universitario">
+                    </div>
+                    <div class="mb-3">
+                        <label for="institucion" class="form-label">Institución</label>
+                        <input type="text" class="form-control" id="institucion" placeholder="Institución">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" onclick="LimpiarModal();" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                <button type="button" class="btn btn-primary" id="btnGuardarProvincia" onclick="GuardarPerfil()">Guardar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div>
+    <h1>Perfil</h1>
+    <div id="perfilContainer">
+        <!-- Aquí se insertarán los datos del perfil -->
+    </div>
+</div>
+<div class="mb-2 text-center">
+    <button type="button" class="btn btn-primary botones" data-bs-toggle="modal" data-bs-target="#ModalProvincia">
+        <i class="fa-light fa-newspaper"></i> Editar
+    </button>
+</div>
+
+@section Scripts {
+    <script src="~/js/Servicio.1.0.0.js"></script>
+    <script>
+        $(document).ready(function () {
+            // Obtener el ID del servicio desde la vista 
+            var servicioID = @ViewBag.ServicioID;
+
+            if (servicioID) {
+              
+                $.ajax({
+                    url: '/Servicios/RecuperarPerfilServicio',
+                    type: 'POST',
+                    data: { id: servicioID },
+                    dataType: 'json',
+                    success: function (perfilMostrar) {
+                        let contenidoPerfil = ``;
+
+                        $.each(perfilMostrar, function (index, perfil) {
+                            contenidoPerfil += `
+                                    <div class="perfil-seccion">
+                                        <h2>Información Personal</h2>
+                                        <p class="textoh3"><strong>Nombre:</strong> ${perfil.nombrePersona}</p>
+                                        <p class="textoh3"><strong>Apellido:</strong> ${perfil.apellidoPersona}</p>
+                                        <p><strong class="textoh3">Teléfono:</strong> ${perfil.telefonoPersona}</p>
+                                        <p><strong class="textoh3">Edad:</strong> ${perfil.edadPersona}</p>
+                                        <p><strong class="textoh3">Documento:</strong> ${perfil.documentoPersona}</p>
+
+                                        <h2 class="textoh2">Información Profesional</h2>
+                                        <p class="textoh2"><strong>Nombre Profesión:</strong> ${perfil.nombreProfesion}</p>
+                                        <p><strong >Descripción:</strong> ${perfil.descripcion}</p>
+                                        <p><strong>Herramienta:</strong> ${perfil.herramienta}</p>
+
+                                        <h2>Educación</h2>
+                                        <p><strong>Título:</strong> ${perfil.titulo}</p>
+                                        <p><strong>Institución:</strong> ${perfil.institucion}</p>
+
+                                        <h2>Contacto</h2>
+                                        <p><strong>Email:</strong> ${perfil.emailPersona}</p>
+
+                                        <h2>Otros</h2>
+                                        <p><strong>Imagen ID:</strong> ${perfil.imagenID}</p>
+                                    </div>
+                                    <hr>`;
+                        });
+
+                        document.getElementById("perfilContainer").innerHTML = contenidoPerfil;
+                    },
+                    error: function (xhr, status, error) {
+                        console.error('Error al cargar el perfil del servicio:', error);
+                    }
+                });
+            }
+        });
+    </script>
+}
