@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- Otras etiquetas de cabeza -->
+    <script src="~/js/Servicio.1.0.0.js"></script>
+    <link rel="stylesheet" href="~/css/Servicio.css" asp-append-version="true" />
+</head>
+
+<body>
+    <div class="btn-ser">
+        <button type="button" class="btn-donate " data-bs-toggle="modal" data-bs-target="#agregarServicio">Agregar
+            Servicio</button>
+    </div>
+    <div class="">
+        <div class="contenedor-card card id=" ServicioID">
+            <div id="contenedorCards" class="row"></div>
+        </div>
+
+        <div class="modal fade" id="agregarServicio" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+            aria-labelledby="exampledModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content modal_style">
+                    
+                    <div class="modal-body">
+                        <div class="modal-header">
+                            <h1 class="modal-title" id="exampleModalLabel" style="color:#fff;">Nuevo Servicio</h1>
+
+                        </div>
+                        <form action="javascript:void(0)" method="post" class="row g-3">
+                            <input type="hidden" id="ServicioID" value="0" />
+                            <div class="col-md-6">
+                                <label for="ProfesionID" class="form-label text-light">Profesion</label>
+                                @Html.DropDownList("ProfesionID", null, htmlAttributes: new
+                                    {
+                                        @class = "form-control",
+                                        id = "ProfesionID"
+                                    })
+                            </div>
+                            <div class="col-md-6">
+                                <label for="PersonaID" class="form-label text-light">Nombre</label>
+                                @Html.DropDownList("PersonaID", null, htmlAttributes: new { @class = "form-control" })
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-check">
+                                    <input type="checkbox" id="herramientas" class="form-check-input">
+                                    <label for="herramientas" class="form-check-label">Herramientas</label>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn-mdl" onclick="LimpiarModal()"
+                                    data-bs-dismiss="modal">Cancelar</button>
+                                <button type="button" class="btn-mdl" onclick="agregarServicio()">Guardar
+                                    cambios</button>
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>
+@section Scripts {
+    <script src="~/js/Servicio.1.0.0.js"></script>
+}

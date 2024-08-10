@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+
+.btn-ser {
+    display: flex;
+    text-align: center;
+}
+
+
+.profesion-group h3 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 50px;
+    text-align: center;
+    margin-bottom: 20px;
+    /* Separación inferior del título */
+    margin-top: 20px;
+    color: black;
+}
+
+.card-container {
+    padding: 15px;
+}
+
+.card-items {
+    background-color: #f8f9fa;
+    /* Color de fondo de la tarjeta */
+    padding: 20px;
+    /* Espaciado interno de la tarjeta */
+    border: 1px solid #dee2e6;
+    /* Borde de la tarjeta */
+    border-radius: 10px;
+    /* Bordes redondeados */
+    height: 100%;
+    /* Asegurar que la tarjeta ocupe toda la altura del contenedor */
+    margin-bottom: 100em;
+    /* Espacio entre tarjetas */
+    /* Separación inferior entre tarjetas */
+
+}
+
+
+
+.tamaniocard {
+    height: 15em;
+    width: 22em;
+    margin: 10px;
+    /* Espacio entre tarjetas */
+    display: grid;
+    color: #f8f9fa;
+    background: #1316c8;
+    background: -webkit-linear-gradient(0deg, #1316c8 0%, #210a2e 100%);
+    background: linear-gradient(0deg, #1316c8 0%, #210a2e 100%);
+    padding: 20px;
+    /* Espaciado interno de la tarjeta */
+    border: 1px solid #dee2e6;
+    /* Borde de la tarjeta */
+    border-radius: 10px;
+    /* Bordes redondeados */
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-gap: 20px;
+    background-size: cover;
+}
+
+.card-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.card-text {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.card-action {
+    text-align: right;
+}
+
+/* Asegúrate de que el contenedor del botón tenga suficiente espacio para centrar el botón */
+.boton-container {
+    display: flex;
+    justify-content: center;
+    /* Centra el botón horizontalmente */
+    margin-bottom: 1rem;
+    /* Opcional: agrega un margen inferior para separar del siguiente contenido */
+
+}
+
+.boton {
+    padding: 1rem 2rem;
+    /* Aumenta el padding para agrandar el botón */
+    font-size: 1.25rem;
+    /* Aumenta el tamaño del texto */
+    border-radius: 0.5rem;
+}
+
+.lugar {
+    text-align: center;
+}
+
+/* From Uiverse.io by ShrinilDhorda */
+.btn-nue {
+    font-size: 1.2rem;
+    padding: 5px 5px;
+    border: none;
+    outline: none;
+    border-radius: 0.4rem;
+    cursor: pointer;
+    text-transform: uppercase;
+    background-color: rgb(14, 14, 26);
+    color: rgb(234, 234, 234);
+    font-weight: 700;
+    transition: 0.6s;
+    box-shadow: 0px 0px 60px #1f4c65;
+    -webkit-box-reflect: below 10px linear-gradient(to bottom, rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.4));
+}
+
+.btn-nue:active {
+    scale: 0.92;
+}
+
+.btn-nue:hover {
+    background: rgb(2, 29, 78);
+    background: linear-gradient(270deg, rgba(2, 29, 78, 0.681) 0%, rgba(31, 215, 232, 0.873) 60%);
+    color: rgb(4, 4, 38);
+}
+
+/*MODAL*/
+
+.modal-body {
+    background: #1316c8;
+    background: -webkit-linear-gradient(0deg, #1316c8 0%, #210a2e 100%);
+    background: linear-gradient(0deg, #1316c8 0%, #210a2e 100%);
+    border-radius: 15px;
+    color: #fff;
+}
+
+.modal-dialog {
+    border-radius: 15px;
+}
+
+/* From Uiverse.io by ShadowShahriar */
+.btn-mdl {
+    --border-radius: 15px;
+    --border-width: 4px;
+    appearance: none;
+    position: relative;
+    padding: 10px;
+    border: 0;
+    background-color: transparent;
+    font-family: "Roboto", Arial, "Segoe UI", sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    color: #fff;
+    z-index: 2;
+}
+
+.btn-mdl::after {
+    --m-i: linear-gradient(#000, #000);
+    --m-o: content-box, padding-box;
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    padding: var(--border-width);
+    border-radius: var(--border-radius);
+    background-image: conic-gradient(#488cfb,
+            #29dbbc,
+            #ddf505,
+            #ff9f0e,
+            #e440bb,
+            #655adc,
+            #488cfb);
+    -webkit-mask-image: var(--m-i), var(--m-i);
+    mask-image: var(--m-i), var(--m-i);
+    -webkit-mask-origin: var(--m-o);
+    mask-origin: var(--m-o);
+    -webkit-mask-clip: var(--m-o);
+    mask-composite: exclude;
+    -webkit-mask-composite: destination-out;
+    filter: hue-rotate(0);
+    animation: rotate-hue linear 500ms infinite;
+    animation-play-state: paused;
+}
+
+.btn-mdl:hover::after {
+    animation-play-state: running;
+}
+
+@keyframes rotate-hue {
+    to {
+        filter: hue-rotate(1turn);
+    }
+}
+
+.btn-mdl,
+.btn-mdl::after {
+    box-sizing: border-box;
+}
+
+.btn-mdl:active {
+    --border-width: 5px;
+}

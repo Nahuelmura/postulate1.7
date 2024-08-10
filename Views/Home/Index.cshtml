@@ -1,0 +1,68 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Postulate.Com</h1>
+    <p>Presentate a la comunidad </a>.</p>
+</div>
+   <link rel="stylesheet" href="~/lib/MDB5/css/mdb.min.css" asp-append-version="true" />
+
+
+@* <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active imagencarrrusel1"></div>
+    <div class="carousel-item imagencarrrusel1"></div>
+    <div class="carousel-item imagencarrrusel1"></div>
+  </div>
+</div> *@
+
+@* <ul class="gallery">
+	<li class="img" style="background: url('/img/albañil.jpeg') no-repeat center center; background-size: cover;"></li>
+	<li class="img" style="background: url('/img/Blank 2 Grids Collage.jpg') no-repeat center center; background-size: cover;"></li>
+	<li class="img" style="background: url('/img/registro.jpg') no-repeat center center; background-size: cover;"></li>
+	<li class="img" style="background: url('/img/Grey Gender Diversity At Work Poster.jpg') no-repeat center center; background-size: cover;"></li>
+	<li class="img" style="background: url('img5.jpg') no-repeat center center; background-size: cover;"></li>
+</ul> *@
+
+
+<div style="text-align: center;">
+  <button class="btn-donate">
+    <a class="nav-link text-light" asp-area="Identity" asp-page="/Account/Register">Register</a>
+  </button>
+  <button class="btn-donate">
+    <a class="nav-link text-light" asp-area="Identity" asp-page="/Account/Login">Login</a>
+  </button>
+</div>
+
+@* <script>
+  const slider = document.querySelector('.gallery');
+let isDown = false;
+let startX;
+let scrollLeft;
+
+slider.addEventListener('mousedown', e => {
+  isDown = true;
+  slider.classList.add('active');
+  startX = e.pageX - slider.offsetLeft;
+  scrollLeft = slider.scrollLeft;
+});
+slider.addEventListener('mouseleave', _ => {
+  isDown = false;
+  slider.classList.remove('active');
+});
+slider.addEventListener('mouseup', _ => {
+  isDown = false;
+  slider.classList.remove('active');
+});
+slider.addEventListener('mousemove', e => {
+  if (!isDown) return;
+  e.preventDefault();
+  const x = e.pageX - slider.offsetLeft;
+  const SCROLL_SPEED = 3;
+  const walk = (x - startX) * SCROLL_SPEED;
+  slider.scrollLeft = scrollLeft - walk;
+});
+
+
+</script> *@
