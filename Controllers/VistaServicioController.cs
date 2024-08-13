@@ -17,50 +17,78 @@ namespace Postulate.Controllers
             _context = context;
         }
 
-      
-        
-
-public IActionResult Index()
-{
-    var profesiones = _context.Profesiones.ToList();
-    profesiones.Add(new Profesion { ProfesionID = 0, Nombre = "[SELECCIONE...]" });
-
-    ViewBag.ProfesionID = new SelectList(profesiones.OrderBy(c => c.Nombre), "ProfesionID", "Nombre");
-    ViewBag.ProfesionBuscarID = new SelectList(profesiones.OrderBy(c => c.Nombre), "ProfesionID", "Nombre");
-
-    var personas = _context.Personas.ToList();
-    personas.Add(new Persona { PersonaID = 0, Nombre = "[SELECCIONE...]" });
-
-    ViewBag.PersonaID = new SelectList(personas.OrderBy(c => c.Nombre), "PersonaID", "Nombre");
-    ViewBag.BuscarPersonaID = new SelectList(personas.OrderBy(c => c.Nombre), "PersonaID", "Nombre");
-
-    // Obtener todos los servicios y mapearlos al modelo VistaServicio
-    var servicios = _context.Servicios
-        .Include(s => s.Persona)
-        .Include(s => s.Profesion)
-        .Include(s => s.Imagen)
-        .Select(p => new VistaServicio
+        public IActionResult Index()
         {
-            ServicioID = p.ServicioID,
-            PersonaID = p.PersonaID,
-            ProfesionID = p.ProfesionID,
-            ImagenID = p.ImagenID,
-            NombrePersona = p.Persona.Nombre,
-            ApellidoPersona = p.Persona.Apellido,
-            TelefonoPersona = p.Persona.Telefono,
-            EdadPersona = p.Persona.Edad,
-            DocumentoPersona = p.Persona.Documento,
-            NombreProfesion = p.Profesion.Nombre,
-            Herramienta = p.Herramienta,
-            Descripcion = p.Descripcion,
-            Titulo = p.Titulo,
-            Institucion = p.Institucion,
-            EmailPersona = p.Persona.Email,
-        }).ToList();
+            var profesiones = _context.Profesiones.ToList();
+            profesiones.Add(new Profesion { ProfesionID = 0, Nombre = "[SELECCIONE...]" });
 
-    // Pasar el modelo a la vista
-    return View("VistaServicio", servicios);
+            ViewBag.ProfesionID = new SelectList(profesiones.OrderBy(c => c.Nombre), "ProfesionID", "Nombre");
+            ViewBag.ProfesionBuscarID = new SelectList(profesiones.OrderBy(c => c.Nombre), "ProfesionID", "Nombre");
+
+          var personas = _context.Personas.ToList();
+            personas.Add(new Persona { PersonaID = 0, Nombre = "[SELECCIONE...]" });
+
+            ViewBag.PersonaID = new SelectList(personas.OrderBy(c => c.Nombre), "PersonaID", "Nombre");
+            ViewBag.BuscarPersonaID = new SelectList(personas.OrderBy(c => c.Nombre), "PersonaID", "Nombre");
+
+
+          
+            return View("VistaServicio");
+        }
+
+        
+public JsonResult CardServicios(int? servicioID, string NombreProfesion)
+{
+    // Lista para almacenar las profesiones y sus servicios correspondientes
+    List<VistaTipoProfesion> tiposProfesionMostrar = new List<VistaTipoProfesion>();
+
+    // Obtener todos los servicios incluyendo la información de la persona y la profesión asociada
+    var servicios = _context.Servicios
+        .Include(t => t.Persona)
+        .Include(t => t.Profesion)
+        .ToList();
+
+    // Filtrar por profesión si se ha proporcionado
+    if (!string.IsNullOrEmpty(NombreProfesion))
+    {
+        servicios = servicios.Where(s => s.Profesion.Nombre == NombreProfesion).ToList();
+    }
+
+    // Organizar los servicios por profesión
+    foreach (var servicio in servicios)
+    {
+        // Buscar si la profesión ya está en la lista
+        var tipoProfesionMostrar = tiposProfesionMostrar.SingleOrDefault(t => t.ProfesionID == servicio.ProfesionID);
+        
+        // Si no está, agregarla a la lista
+        if (tipoProfesionMostrar == null)
+        {
+            tipoProfesionMostrar = new VistaTipoProfesion
+            {
+                ProfesionID = servicio.ProfesionID,
+                Nombre = servicio.Profesion.Nombre,
+                ListadoPersonas = new List<VistaPersonasServicios>()
+            };
+            tiposProfesionMostrar.Add(tipoProfesionMostrar);
+        }
+
+        // Crear la entrada para la persona y agregarla a la profesión correspondiente
+        var vistaPersonasServicios = new VistaPersonasServicios
+        {
+            NombrePersona = servicio.Persona.Nombre,
+            ApellidoPersona = servicio.Persona.Apellido,
+            TelefonoPersona = servicio.Persona.Telefono,
+            ServicioID = servicio.ServicioID
+        };
+
+        tipoProfesionMostrar.ListadoPersonas.Add(vistaPersonasServicios);
+    }
+
+    // Retornar la lista de profesiones con sus respectivos servicios/personas
+    return Json(tiposProfesionMostrar);
 }
+
+        
 
        
 
