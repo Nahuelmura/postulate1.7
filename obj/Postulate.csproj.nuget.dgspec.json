@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\crist\\OneDrive\\Escritorio\\postulate1.6\\Postulate.com\\Postulate.com\\Postulate.csproj": {}
+    "C:\\Users\\crist\\OneDrive\\Escritorio\\postulate1.7\\Postulate.com\\Postulate.csproj": {}
   },
   "projects": {
-    "C:\\Users\\crist\\OneDrive\\Escritorio\\postulate1.6\\Postulate.com\\Postulate.com\\Postulate.csproj": {
+    "C:\\Users\\crist\\OneDrive\\Escritorio\\postulate1.7\\Postulate.com\\Postulate.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\crist\\OneDrive\\Escritorio\\postulate1.6\\Postulate.com\\Postulate.com\\Postulate.csproj",
+        "projectUniqueName": "C:\\Users\\crist\\OneDrive\\Escritorio\\postulate1.7\\Postulate.com\\Postulate.csproj",
         "projectName": "Postulate",
-        "projectPath": "C:\\Users\\crist\\OneDrive\\Escritorio\\postulate1.6\\Postulate.com\\Postulate.com\\Postulate.csproj",
+        "projectPath": "C:\\Users\\crist\\OneDrive\\Escritorio\\postulate1.7\\Postulate.com\\Postulate.csproj",
         "packagesPath": "C:\\Users\\crist\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\crist\\OneDrive\\Escritorio\\postulate1.6\\Postulate.com\\Postulate.com\\obj\\",
+        "outputPath": "C:\\Users\\crist\\OneDrive\\Escritorio\\postulate1.7\\Postulate.com\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\crist\\AppData\\Roaming\\NuGet\\NuGet.Config",

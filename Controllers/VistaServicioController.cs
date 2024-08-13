@@ -80,30 +80,10 @@ public JsonResult CardServicios(int? servicioID, string NombreProfesion)
         tipoProfesionMostrar.ListadoPersonas.Add(vistaPersonasServicios);
     }
 
-    // var serviciosPlanos = servicios.Select(e => new VistaServicio
-    // {
-    //     ServicioID = e.ServicioID,
-    //     PersonaID = e.PersonaID,
-    //     ProfesionID = e.ProfesionID,
-    //     ImagenID = e.ImagenID,
-    //     NombrePersona = e.Persona.Nombre,
-    //     NombreProfesion = e.Profesion.Nombre,
-    //     TelefonoPersona = e.Persona.Telefono,
-    //     Herramienta = e.Herramienta,
-    //     Descripcion = e.Descripcion,
-    //     Titulo = e.Titulo,
-    //     Institucion = e.Institucion
-    // }).ToList();
-
-    // if (id != null)
-    // {
-    //     serviciosPlanos = serviciosPlanos.Where(t => t.ServicioID == id).ToList();
-    // }
-
+    // Retornar la lista de profesiones con sus respectivos servicios/personas
     return Json(tiposProfesionMostrar);
+}
 
-
-    }
         
 
        

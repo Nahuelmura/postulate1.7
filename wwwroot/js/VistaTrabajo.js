@@ -1,6 +1,6 @@
 function CardTrabajos() {
     $.ajax({
-        url: '/Trabajo/CardTrabajos',
+        url: '/VistaTrabajo/CardTrabajos',
         data: {},
         type: 'POST',
         dataType: 'json',
@@ -85,7 +85,7 @@ function agregarTrabajo() {
 
     $.ajax({
         // URL para la petición
-        url: '/Trabajo/AgregarTrabajo',
+        url: '/VistaTrabajo/AgregarTrabajo',
         // Información a enviar
         data: formData,
         // Especifica si será una petición POST
@@ -143,7 +143,7 @@ function agregarTrabajo() {
 
 function EditarTrabajo(trabajoID) {
     $.ajax({
-        url: '/Trabajo/CardTrabajos',
+        url: '/VistaTrabajo/CardTrabajos',
         data: { id: trabajoID },
         type: 'POST',
         dataType: 'json',
@@ -172,7 +172,7 @@ function EditarTrabajo(trabajoID) {
 function EliminarTrabajo(trabajoID) {
     $.ajax({
         // la URL para la petición
-        url: '../../Trabajo/EliminarTrabajo',
+        url: '../../VistaTrabajo/EliminarTrabajo',
         data: { trabajoID: trabajoID },
         type: 'POST',
         dataType: 'json',

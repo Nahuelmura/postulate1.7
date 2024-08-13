@@ -1,5 +1,6 @@
 using System.Diagnostics;
 using System.Linq;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
@@ -10,13 +11,15 @@ namespace Postulate.Controllers;
 
 public class TrabajoController : Controller
 {
-    private readonly ILogger<TrabajoController> _logger;
+      private readonly ILogger<TrabajoController> _logger;
     private readonly ApplicationDbContext _context;
+    private readonly UserManager<IdentityUser> _userManager;
 
-    public TrabajoController(ILogger<TrabajoController> logger, ApplicationDbContext context)
+    public TrabajoController(ILogger<TrabajoController> logger, ApplicationDbContext context,UserManager<IdentityUser> userManager)
     {
-        _logger = logger;
+           _logger = logger;
         _context = context;
+        _userManager = userManager;
     }
 
     public IActionResult Index()
@@ -39,26 +42,33 @@ public class TrabajoController : Controller
 
 
 
-    public JsonResult CardTrabajos( int id, string NombreProfesion)
+       public async Task<JsonResult> CardTrabajos(int id, string NombreProfesion)
     {
-
-         
-
+        var usuarioLogueado = await _userManager.GetUserAsync(HttpContext.User);
+        var correoUsuarioLogueado = usuarioLogueado?.Email;
 
         List<VistaProfesion> tiposProfesionMostrar = new List<VistaProfesion>();
 
-        var trabajos = _context.Trabajos.Include(t => t.Persona).Include(t => t.Profesion).ToList();
+        // Obtener las profesiones de los servicios propuestos por el usuario logueado
+        var serviciosPropuestos = _context.Servicios
+            .Include(s => s.Profesion)
+            .Where(s => s.Persona.Email == correoUsuarioLogueado)
+            .Select(s => s.ProfesionID)
+            .Distinct()
+            .ToList();
 
-        // llamada completar 
+        // Filtrar los trabajos basados en las profesiones de los servicios propuestos
+        var trabajos = _context.Trabajos
+            .Include(t => t.Persona)
+            .Include(t => t.Profesion)
+            .Where(t => serviciosPropuestos.Contains(t.ProfesionID))
+            .ToList();
 
-        if (NombreProfesion != null)
+        // Aplicar filtro adicional por nombre de profesión si se especifica
+        if (!string.IsNullOrEmpty(NombreProfesion))
         {
             trabajos = trabajos.Where(s => s.Profesion.Nombre == NombreProfesion).ToList();
         }
-
-
-
-
 
         foreach (var trabajo in trabajos)
         {
@@ -70,17 +80,12 @@ public class TrabajoController : Controller
                     ProfesionID = trabajo.ProfesionID,
                     Nombre = trabajo.Profesion.Nombre,
                     ListadoPersonas = new List<VistaTrabajoPersonas>(),
-
-
-
                 };
                 tiposProfesionMostrar.Add(tipoProfesionMostrar);
             }
 
             var VistaTrabajoPersonas = new VistaTrabajoPersonas
             {
-
-
                 NombrePersona = trabajo.Persona.Nombre,
                 ApellidoPersona = trabajo.Persona.Apellido,
                 TelefonoPersona = trabajo.Persona.Telefono,
@@ -92,21 +97,15 @@ public class TrabajoController : Controller
                 Hora = trabajo.Hora,
                 Fecha = trabajo.Fecha,
                 Comentario = trabajo.Comentario,
-
             };
 
             tipoProfesionMostrar.ListadoPersonas.Add(VistaTrabajoPersonas);
         }
 
-
         return Json(tiposProfesionMostrar);
-
-
     }
 
-
-
-    public JsonResult AgregarTrabajo(int id, int PersonaID, int TrabajoID, int ProfesionID, int? ImagenID, string direccion, string descripcion, DateTime hora, DateTime fecha, int valoracion, string comentario)
+      public JsonResult AgregarTrabajo(int id, int PersonaID, int TrabajoID, int ProfesionID, int? ImagenID, string direccion, string descripcion, DateTime hora, DateTime fecha, int valoracion, string comentario)
     {
 
         var trabajoExistente = _context.Trabajos.FirstOrDefault(s => s.PersonaID == PersonaID && s.ProfesionID == ProfesionID);
@@ -190,9 +189,5 @@ public class TrabajoController : Controller
 
     }
 
-
-
-
-
-
+    
 

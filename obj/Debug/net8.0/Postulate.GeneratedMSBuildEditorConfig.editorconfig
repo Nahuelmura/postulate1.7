@@ -17,127 +17,127 @@ build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Postulate
 build_property.RootNamespace = Postulate
-build_property.ProjectDir = C:\Users\crist\OneDrive\Escritorio\postulate1.6\Postulate.com\Postulate.com\
+build_property.ProjectDir = C:\Users\crist\OneDrive\Escritorio\postulate1.7\Postulate.com\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\crist\OneDrive\Escritorio\postulate1.6\Postulate.com\Postulate.com
+build_property.MSBuildProjectDirectory = C:\Users\crist\OneDrive\Escritorio\postulate1.7\Postulate.com
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/crist/OneDrive/Escritorio/postulate1.6/Postulate.com/Postulate.com/Areas/Identity/Pages/Account/AccessDenied.cshtml]
+[C:/Users/crist/OneDrive/Escritorio/postulate1.7/Postulate.com/Areas/Identity/Pages/Account/AccessDenied.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxBY2Nlc3NEZW5pZWQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/crist/OneDrive/Escritorio/postulate1.6/Postulate.com/Postulate.com/Areas/Identity/Pages/Account/ForgotPassword.cshtml]
+[C:/Users/crist/OneDrive/Escritorio/postulate1.7/Postulate.com/Areas/Identity/Pages/Account/ForgotPassword.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxGb3Jnb3RQYXNzd29yZC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/crist/OneDrive/Escritorio/postulate1.6/Postulate.com/Postulate.com/Areas/Identity/Pages/Account/Login.cshtml]
+[C:/Users/crist/OneDrive/Escritorio/postulate1.7/Postulate.com/Areas/Identity/Pages/Account/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/crist/OneDrive/Escritorio/postulate1.6/Postulate.com/Postulate.com/Areas/Identity/Pages/Account/Logout.cshtml]
+[C:/Users/crist/OneDrive/Escritorio/postulate1.7/Postulate.com/Areas/Identity/Pages/Account/Logout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxMb2dvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/crist/OneDrive/Escritorio/postulate1.6/Postulate.com/Postulate.com/Areas/Identity/Pages/Account/Manage/ChangePassword.cshtml]
+[C:/Users/crist/OneDrive/Escritorio/postulate1.7/Postulate.com/Areas/Identity/Pages/Account/Manage/ChangePassword.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcQ2hhbmdlUGFzc3dvcmQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/crist/OneDrive/Escritorio/postulate1.6/Postulate.com/Postulate.com/Areas/Identity/Pages/Account/Manage/_ManageNav.cshtml]
+[C:/Users/crist/OneDrive/Escritorio/postulate1.7/Postulate.com/Areas/Identity/Pages/Account/Manage/_ManageNav.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcX01hbmFnZU5hdi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/crist/OneDrive/Escritorio/postulate1.6/Postulate.com/Postulate.com/Areas/Identity/Pages/Account/Manage/_ViewImports.cshtml]
+[C:/Users/crist/OneDrive/Escritorio/postulate1.7/Postulate.com/Areas/Identity/Pages/Account/Manage/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/crist/OneDrive/Escritorio/postulate1.6/Postulate.com/Postulate.com/Areas/Identity/Pages/Account/Register.cshtml]
+[C:/Users/crist/OneDrive/Escritorio/postulate1.7/Postulate.com/Areas/Identity/Pages/Account/Register.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxSZWdpc3Rlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/crist/OneDrive/Escritorio/postulate1.6/Postulate.com/Postulate.com/Areas/Identity/Pages/Account/_ViewImports.cshtml]
+[C:/Users/crist/OneDrive/Escritorio/postulate1.7/Postulate.com/Areas/Identity/Pages/Account/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxfVmlld0ltcG9ydHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/crist/OneDrive/Escritorio/postulate1.6/Postulate.com/Postulate.com/Areas/Identity/Pages/_ValidationScriptsPartial.cshtml]
+[C:/Users/crist/OneDrive/Escritorio/postulate1.7/Postulate.com/Areas/Identity/Pages/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZhbGlkYXRpb25TY3JpcHRzUGFydGlhbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/crist/OneDrive/Escritorio/postulate1.6/Postulate.com/Postulate.com/Areas/Identity/Pages/_ViewImports.cshtml]
+[C:/Users/crist/OneDrive/Escritorio/postulate1.7/Postulate.com/Areas/Identity/Pages/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/crist/OneDrive/Escritorio/postulate1.6/Postulate.com/Postulate.com/Areas/Identity/Pages/_ViewStart.cshtml]
+[C:/Users/crist/OneDrive/Escritorio/postulate1.7/Postulate.com/Areas/Identity/Pages/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/crist/OneDrive/Escritorio/postulate1.6/Postulate.com/Postulate.com/Views/Home/Index.cshtml]
+[C:/Users/crist/OneDrive/Escritorio/postulate1.7/Postulate.com/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/crist/OneDrive/Escritorio/postulate1.6/Postulate.com/Postulate.com/Views/Home/Privacy.cshtml]
+[C:/Users/crist/OneDrive/Escritorio/postulate1.7/Postulate.com/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/crist/OneDrive/Escritorio/postulate1.6/Postulate.com/Postulate.com/Views/Localidad/Localidad.cshtml]
+[C:/Users/crist/OneDrive/Escritorio/postulate1.7/Postulate.com/Views/Localidad/Localidad.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9jYWxpZGFkXExvY2FsaWRhZC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/crist/OneDrive/Escritorio/postulate1.6/Postulate.com/Postulate.com/Views/Persona/Persona.cshtml]
+[C:/Users/crist/OneDrive/Escritorio/postulate1.7/Postulate.com/Views/Persona/Persona.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVyc29uYVxQZXJzb25hLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/crist/OneDrive/Escritorio/postulate1.6/Postulate.com/Postulate.com/Views/Provincia/Provincia.cshtml]
+[C:/Users/crist/OneDrive/Escritorio/postulate1.7/Postulate.com/Views/Provincia/Provincia.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvdmluY2lhXFByb3ZpbmNpYS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/crist/OneDrive/Escritorio/postulate1.6/Postulate.com/Postulate.com/Views/Servicios/Servicio.cshtml]
+[C:/Users/crist/OneDrive/Escritorio/postulate1.7/Postulate.com/Views/Servicios/Servicio.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VydmljaW9zXFNlcnZpY2lvLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/crist/OneDrive/Escritorio/postulate1.6/Postulate.com/Postulate.com/Views/Servicios/VistaServicio.cshtml]
+[C:/Users/crist/OneDrive/Escritorio/postulate1.7/Postulate.com/Views/Servicios/VistaServicio.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VydmljaW9zXFZpc3RhU2VydmljaW8uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/crist/OneDrive/Escritorio/postulate1.6/Postulate.com/Postulate.com/Views/Shared/Error.cshtml]
+[C:/Users/crist/OneDrive/Escritorio/postulate1.7/Postulate.com/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/crist/OneDrive/Escritorio/postulate1.6/Postulate.com/Postulate.com/Views/Shared/_LoginPartial.cshtml]
+[C:/Users/crist/OneDrive/Escritorio/postulate1.7/Postulate.com/Views/Shared/_LoginPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Mb2dpblBhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/crist/OneDrive/Escritorio/postulate1.6/Postulate.com/Postulate.com/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/crist/OneDrive/Escritorio/postulate1.7/Postulate.com/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/crist/OneDrive/Escritorio/postulate1.6/Postulate.com/Postulate.com/Views/TiposProfesion/TiposProfesion.cshtml]
+[C:/Users/crist/OneDrive/Escritorio/postulate1.7/Postulate.com/Views/TiposProfesion/TiposProfesion.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGlwb3NQcm9mZXNpb25cVGlwb3NQcm9mZXNpb24uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/crist/OneDrive/Escritorio/postulate1.6/Postulate.com/Postulate.com/Views/Trabajo/Trabajo.cshtml]
+[C:/Users/crist/OneDrive/Escritorio/postulate1.7/Postulate.com/Views/Trabajo/Trabajo.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHJhYmFqb1xUcmFiYWpvLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/crist/OneDrive/Escritorio/postulate1.6/Postulate.com/Postulate.com/Views/VistaServicio/VistaServicio.cshtml]
+[C:/Users/crist/OneDrive/Escritorio/postulate1.7/Postulate.com/Views/VistaServicio/VistaServicio.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmlzdGFTZXJ2aWNpb1xWaXN0YVNlcnZpY2lvLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/crist/OneDrive/Escritorio/postulate1.6/Postulate.com/Postulate.com/Views/VistaTrabajo/VistaTrabajo.cshtml]
+[C:/Users/crist/OneDrive/Escritorio/postulate1.7/Postulate.com/Views/VistaTrabajo/VistaTrabajo.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmlzdGFUcmFiYWpvXFZpc3RhVHJhYmFqby5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/crist/OneDrive/Escritorio/postulate1.6/Postulate.com/Postulate.com/Views/_ViewImports.cshtml]
+[C:/Users/crist/OneDrive/Escritorio/postulate1.7/Postulate.com/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/crist/OneDrive/Escritorio/postulate1.6/Postulate.com/Postulate.com/Views/_ViewStart.cshtml]
+[C:/Users/crist/OneDrive/Escritorio/postulate1.7/Postulate.com/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/crist/OneDrive/Escritorio/postulate1.6/Postulate.com/Postulate.com/Views/Shared/_Layout.cshtml]
+[C:/Users/crist/OneDrive/Escritorio/postulate1.7/Postulate.com/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-elu6sz3zlt
